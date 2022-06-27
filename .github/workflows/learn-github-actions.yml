@@ -10,5 +10,6 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: pwd
+      - run: ls
       - run: cat readme.md
       - run: bats -v
