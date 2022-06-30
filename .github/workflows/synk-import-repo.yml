@@ -5,7 +5,7 @@ env:
  SNYK_TOKEN: ${{ secrets.SNYK_IMPORT_SNYK_TOKEN}}
  SNYK_LOG_PATH: "."
  SNYK_IMPORT_PATH: "."
- SNYK_ORG_ID: ${{ secrets.SNYK_ORG_ID}}
+ SNYK_ORG_ID: 50400029-a7f7-4be2-8d94-cc1ef051efa6
 on:
   push:
 #   schedule:
