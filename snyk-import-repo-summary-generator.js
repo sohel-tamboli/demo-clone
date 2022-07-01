@@ -14,7 +14,7 @@ try {
 
   for (var log, _pj_c = 0, _pj_a = import_job_file, _pj_b = _pj_a.length; _pj_c < _pj_b; _pj_c += 1) {
     log = _pj_a[_pj_c];
-    json_log = json.loads(log);
+    json_log = json.parse(log);
 
     if (json_log["logs"].length > 0) {
       repo_name = json_log["logs"][0]["name"];
