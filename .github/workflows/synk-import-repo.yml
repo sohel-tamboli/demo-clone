@@ -44,4 +44,4 @@ jobs:
         run: DEBUG=snyk* snyk-api-import import > synk-api-import-output.txt
         
       - name: running summary generator
-        run: node snyk-import-repo-summary-generator.js
+        run: node snyk-import-repo-summary-generator.mjs
