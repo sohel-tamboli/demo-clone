@@ -33,6 +33,8 @@ jobs:
         run: chmod 711 snyk-api-import-linux
       - name: Install snyk-api-import
         run: npm install snyk-api-import@latest -g
+      - name: Install json
+        run: npm install json -g
       - name: List all github repo data in github-enterprise-import-targets.json
         run: DEBUG=snyk* snyk-api-import import:data --orgsData=./snyk-created-orgs.json --source=github-enterprise --integrationType=github-enterprise
       - name: Creates log files containing details on existing repositories
