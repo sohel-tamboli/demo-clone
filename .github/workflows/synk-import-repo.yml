@@ -43,4 +43,5 @@ jobs:
       - name: Import the repositories
         run: DEBUG=snyk* snyk-api-import import > synk-api-import-output.txt
         
-      - run: grep -E '^Loaded [\\d]+ target(s) to import ' synk-api-import-output.txt
+      - name: running summary generator
+        run: node snyk-import-repo-summary-generator.js
