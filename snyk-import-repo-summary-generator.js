@@ -22,7 +22,7 @@ const summary_generator = async () => {
       console: false,
     });
     data = []
-    readInterface.on("line", async function (line) {
+    readInterface.on("line", function (line) {
       json_log = JSON.parse(line);
       if (json_log["logs"].length > 0) {
         repo_name = json_log["logs"][0]["name"];
@@ -37,7 +37,9 @@ const summary_generator = async () => {
           data.push([repo_name, is_imported, import_time])
         }
       }
+
       
+    }).on('close', async function(){
       await core.summary
       .addHeading("Test Results")
       .addTable([
@@ -45,8 +47,8 @@ const summary_generator = async () => {
         ...data
     ])
       .write();
-
     });
+
     
   } catch (e) {
     console.log(e);
