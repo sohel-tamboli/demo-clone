@@ -38,7 +38,7 @@ const summary_generator = async () => {
         }
       }
     });
-
+    console.log(...data);
     await core.summary
       .addHeading("Test Results")
       .addTable([
