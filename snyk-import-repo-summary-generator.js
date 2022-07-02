@@ -37,15 +37,17 @@ const summary_generator = async () => {
           data.push([repo_name, is_imported, import_time])
         }
       }
-    });
-    console.log(...data);
-    await core.summary
+      
+      await core.summary
       .addHeading("Test Results")
       .addTable([
         [{ data: "Repository name", header: true }, { data: "Imported Status", header: true }, { data: "Time", header: true }],
         ...data
     ])
       .write();
+
+    });
+    
   } catch (e) {
     console.log(e);
   }
