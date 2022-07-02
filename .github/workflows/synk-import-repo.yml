@@ -31,5 +31,7 @@ jobs:
         run: mv github-import-targets.json import-projects.json
       - name: Import the repositories
         run: DEBUG=snyk* snyk-api-import import
+      - name: install libraries
+        run: npm install
       - name: running summary generator
         run: node snyk-import-repo-summary-generator.js
