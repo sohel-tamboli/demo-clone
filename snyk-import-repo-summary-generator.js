@@ -22,7 +22,7 @@ const summary_generator = async () => {
       console: false,
     });
     data = []
-    readInterface.on("line", function (line) {
+    readInterface.on("line", async function (line) {
       json_log = JSON.parse(line);
       if (json_log["logs"].length > 0) {
         repo_name = json_log["logs"][0]["name"];
