@@ -1,7 +1,7 @@
 // import * as json from 'json';
 // import * as core from '@actions/core';
 
-// const core = require('@actions/core')
+const core = require('@actions/core')
 var fs = require ('fs');
 const readline = require('readline');
 

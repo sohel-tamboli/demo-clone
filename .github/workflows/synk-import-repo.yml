@@ -1,8 +1,8 @@
 name: Import new repositories into snyk
 
 env: 
- GITHUB_TOKEN: ${{ secrets.SNYK_IMPORT_GITHUB_TOKEN }}
- SNYK_TOKEN: ${{ secrets.SNYK_IMPORT_SNYK_TOKEN}}
+ GITHUB_TOKEN: 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
+ SNYK_TOKEN: 9216a54c-0551-4224-b86c-f458028f74cc
  SNYK_LOG_PATH: "."
  SNYK_IMPORT_PATH: "."
  SNYK_ORG_ID: 50400029-a7f7-4be2-8d94-cc1ef051efa6
