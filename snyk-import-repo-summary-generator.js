@@ -34,7 +34,7 @@ const summary_generator = async () => {
           console.log(
             `${repo_name} repository is ${is_imported} imported on ${import_time} `
           );
-          data.push([repo_name, (is_imported ? "yes": "no"), new Date(Date.parse(import_time)).toString()])
+          data.push([repo_name, (is_imported ? "yes": "no"), new Date(Date.parse(import_time)).toLocaleString(undefined, {timeZone: 'Asia/Kolkata'})])
         }
       }
 
