@@ -5,5 +5,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: (test -f snyk_dependencies.json || test -f snyk_code.json) && echo "You can find the detailed report [here](https://github.com/medlypharmacy/reusable-workflows/actions/runs/2669219952)" >> vulnerabilities.md
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: (test -f snyk_dependencies.json || test -f snyk_code.json) && (echo "You can find the detailed report [here](https://github.com/medlypharmacy/reusable-workflows/actions/runs/2669219952)" >> vulnerabilities.md
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event.")
